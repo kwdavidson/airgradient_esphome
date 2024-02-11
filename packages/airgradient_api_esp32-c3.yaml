@@ -10,7 +10,7 @@ interval:
               # https://api.airgradient.com/public/docs/api/v1/
               # AirGradient URL with the MAC address all lower case
               url: !lambda |-
-                return "http://hw.airgradient.com/sensors/airgradient:" + get_mac_address() + "/measures";
+                return "http://hw.airgradient.com/sensors/" + get_mac_address() + "/measures";
               headers:
                   Content-Type: application/json
               # "!lambda return to_string(id(pm_2_5).state);" Converts sensor output from double to string
